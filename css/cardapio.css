@@ -1,30 +1,32 @@
-/*Geral*/
-*{
+/* Geral */
+* {
     background-color: #fbae39;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: #444;
     transition: 0.45s;
 }
 
-a:hover{
+a:hover {
     color: #ddd;
 }
 
-/*Navbar*/
-#navbar{
+/* Navbar */
+#navbar {
     padding: 1.5rem 2.5rem;
     border-bottom: 2px solid #ddd;
 }
-#navbar-inner{
+
+#navbar-inner {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -32,85 +34,153 @@ a:hover{
     margin: 0 auto;
 }
 
-.nav-links{
+.nav-links {
     font-size: 20px;
     display: flex;
     gap: 1.5rem;
 }
 
-.container{
+/* Container */
+.container {
     padding: 2rem 2.5rem;
     max-width: 2000px;
     margin: 0 auto;
     background-image: url("../img/fundo.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 2000px;
+    background-size: 3000px;
     text-align: center;
 }
 
-#posts-container{
-    flex: 3 1 0;
+#posts-container {
     max-width: 1000px;
     display: inline-block;
     text-align: left;
 }
 
-#posts{
-    margin: 2.5rem ;
-
+#posts {
+    margin: 2.5rem;
 }
 
-.cardapio{
+.cardapio {
     border: 4px double #444;
     padding: 2rem 2.5rem;
 }
-.cardapio h2{
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .text-price {
+    flex: 1;
+  }
+  
+  .price {
+    flex: 0 0 50px;
+    margin-left: 200px;
+    text-align: right;
+
+  }
+.cardapio h2 {
     margin-top: 10px;
     text-align: left;
     font-size: 30px;
 }
-.cardapio p{
+
+.cardapio p {
     text-align: left;
     font-size: 20px;
 }
 
-.cardapio img{
+.cardapio img {
     width: 150px;
     margin-top: 2px;
-    margin-left: 150px;
+    margin-left: 200px;
 }
 
-#paragraph{
+#paragraph {
     margin-top: 3px;
     text-align: left;
     font-size: 15px;
 }
 
-#footer{
+#footer {
     border-top: 2px solid #ddd;
     padding: 2rem;
     text-align: center;
 }
 
 #footer h2,
-.footer p{
+.footer p {
     margin-bottom: 1.2rem;
 }
 
-@media (max-widht: 450px){
-    .container{
-        font-size: 14px;
-        max-width: 1000px;
+/* Responsividade */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .container {
+       max-width: 1000px;
+       background-size: 10000px;
+     }
+     #posts-container {
+       max-width: 800px;
+     }
+    .cardapio {
+       padding: 1.5rem 2rem;
+     }
+    .item {
+       flex-direction: column;
+     }
+    .text-price {
+       margin-bottom: 10px;
+     }
+    .price {
+       margin-left: 0;
+     }
+   }
+   
+   /* Smartphone */
+   @media (max-width: 480px) {
+    #navbar-inner {
+        padding: 0.5rem;
     }
 
-    #posts-container{
-        max-width: 800px;
+    .nav-links {
+        font-size: 18px;
     }
 
-    #footer p{
-        font-size: 10px;
+    .mapbox {
+        height: 200px;
     }
-}
 
+    * {
+        font-size: 16px;
+    }
+
+    .container {
+       max-width: 600px;
+     }
+     #posts-container {
+       max-width: 500px;
+     }
+    .cardapio {
+       padding: 10px 5px;
+     }
+    .item {
+       flex-direction: column;
+     }
+    .text-price {
+       margin-bottom: 10px;
+     }
+    .price {
+       margin-left: 0;
+     }
+    .cardapio img {
+       width: 100px;
+       margin-left: 50px;
+     }
+   }
 
